@@ -1,0 +1,131 @@
+/* Reseta margens e define a fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página levemente acinzentado */
+body {
+    background-color: #f3f2ef;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Caixa principal do currículo (simulando uma folha A4) */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    border-bottom: 3px solid #0a66c2; /* Cor azul do LinkedIn */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+header h2 {
+    font-size: 1.1em;
+    color: #0a66c2;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+header p {
+    color: #666666;
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+
+/* Seções gerais */
+section {
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #000000;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Texto do Sobre */
+.sobre p {
+    margin-bottom: 12px;
+    text-align: justify;
+    font-size: 0.95em;
+}
+
+/* Experiência Profissional */
+.job {
+    margin-bottom: 20px;
+}
+
+.job h4 {
+    font-size: 1.1em;
+    color: #333333;
+}
+
+.job .company {
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.job ul, .formacao ul {
+    margin-left: 20px;
+}
+
+.job li, .formacao li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+/* Tags de Habilidades */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    margin-left: 0;
+}
+
+.skills-list li {
+    background-color: #e9ecef;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #333333;
+    border: 1px solid #d1d5db;
+}
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+}
