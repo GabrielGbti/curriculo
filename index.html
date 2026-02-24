@@ -5,61 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Gabriel Bernardo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Gabriel Bernardo</h1>
-            <h2>TI | Redes & Suporte Técnico | Desenvolvimento Web | Hardware</h2>
-            <p>Belo Horizonte, Minas Gerais, Brasil</p>
-            <p>gabriel.email@exemplo.com | (31) 99999-9999 | linkedin.com/in/gabrielbernardoti</p>
-        </header>
+    <div class="resume-container">
+        <aside class="sidebar">
+            <div class="profile-photo">
+                <img src="img/euapresentando.jpeg" alt="Foto de Perfil de Gabriel Bernardo" class="photo">
+            </div>
 
-        <section class="sobre">
-            <h3>Sobre Mim</h3>
-            <p>Sou estudante e entusiasta da área de Tecnologia da Informação, com atuação em redes, infraestrutura, desenvolvimento web (back-end e front-end) e hardware.</p>
-            <p>Além disso, me preparo para concursos públicos voltados para a área de tecnologia e segurança pública. Já tive algumas reprovações e aprovações, e continuo com foco em concurso federal e no ingresso na universidade pública mineira.</p>
-            <p>Somado à prática com redes e suporte, venho desenvolvendo habilidades em programação web, tanto no front-end (HTML, CSS, JavaScript) quanto no back-end (Python, Node.js e PHP).</p>
-            <p>Cursei o Técnico em Informática na Faculdade Senac, onde aprofundei meus conhecimentos em sistemas, redes e hardware.</p>
-            <p>Durante o curso técnico, atuei como estagiário de TI no Colégio Logosófico. Lá, administrei a rede interna, ofereci suporte a usuários, configurei hosts e realizei a instalação de softwares. Iniciei minha trajetória na instituição como Jovem Aprendiz na área administrativa e, após demonstrar dedicação e interesse, fui promovido ao setor de tecnologia.</p>
-            <p>Concluí recentemente o curso "Introdução às Redes" da Cisco, onde aprimorei meus conhecimentos sobre comunicação entre dispositivos, topologias de rede, protocolos e endereçamento IP.</p>
-            <p>Possuo excelente comunicação, facilitando a interação com usuários e equipes. Sou proativo, com sede de aprendizado e sempre aberto a novos desafios, buscando crescer e contribuir na área de Tecnologia da Informação.</p>
-        </section>
-
-        <section class="experiencia">
-            <h3>Experiência Profissional</h3>
-            <div class="job">
-                <h4>Estagiário de TI</h4>
-                <p class="company">Colégio Logosófico - Belo Horizonte</p>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Dados Pessoais</h3>
                 <ul>
-                    <li>Administração da rede interna, configuração de hosts e instalação de softwares.</li>
-                    <li>Suporte técnico direto a usuários, garantindo o bom funcionamento dos equipamentos e sistemas.</li>
-                    <li>Promovido ao setor de tecnologia após ingressar na instituição como Jovem Aprendiz na área administrativa, devido à dedicação e proatividade.</li>
+                    <li><i class="fas fa-user"></i> Gabriel Bernardo</li>
+                    
+                    <li><i class="fas fa-calendar-alt"></i> 20 anos </li>
+                    
+                    <li><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</li>
                 </ul>
             </div>
-        </section>
 
-        <section class="formacao">
-            <h3>Formação Acadêmica e Cursos</h3>
-            <ul>
-                <li><strong>Técnico em Informática</strong> - Faculdade Senac</li>
-                <li><strong>Introdução às Redes</strong> - Cisco</li>
-            </ul>
-        </section>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Dados de Contato</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> ti.gabrielgb@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> (31) 99518-3638</li>
+                    <li><i class="fab fa-linkedin"></i> www.linkedin.com/in/<br>gabrielbernardoti</li>
+                </ul>
+            </div>
+        </aside>
 
-        <section class="habilidades">
-            <h3>Competências e Tecnologias</h3>
-            <ul class="skills-list">
-                <li>Manutenção de Hardware</li>
-                <li>Redes de Computadores</li>
-                <li>Suporte Técnico</li>
-                <li>Atendimento ao Cliente</li>
-                <li>Front-end (HTML, CSS, JavaScript)</li>
-                <li>Back-end (Python, Node.js, PHP)</li>
-                <li>Banco de Dados (MySQL)</li>
-                <li>Figma</li>
-            </ul>
-        </section>
+        <main class="main-content">
+            <header class="header">
+                <h1 class="name">Gabriel Bernardo</h1>
+                <h2 class="title">TI | Redes & Suporte Técnico | Desenvolvimento Web | Hardware</h2>
+            </header>
+
+            <section class="section summary">
+                <h3 class="section-title">Resumo Pessoal</h3>
+                <p>Sou estudante e entusiasta da área de Tecnologia da Informação, com atuação em redes, infraestrutura, desenvolvimento web (back-end e front-end) e hardware.</p>
+                <p>Somado à prática com redes e suporte, venho desenvolvendo habilidades em programação web, tanto no front-end (HTML, CSS, JavaScript) quanto no back-end (Python, Node.js e PHP).</p>
+                <p>Possuo excelente comunicação, facilitando a interação com usuários e equipes. Sou proativo, com sede de aprendizado e sempre aberto a novos desafios, buscando crescer e contribuir na área de Tecnologia da Informação.</p>
+            </section>
+
+            <section class="section skills">
+                <h3 class="section-title">Competências</h3>
+                <ul class="skills-list">
+                    <li>Hardware de computador</li>
+                    <li>Redes de computadores</li>
+                    <li>Suporte técnico</li>
+                    <li>Desenvolvimento de front-end (HTML, CSS, JavaScript)</li>
+                    <li>Banco de Dados (MySQL)</li>
+                    <li>Atendimento ao usuário</li>
+                </ul>
+            </section>
+
+            <section class="section experience">
+                <h3 class="section-title">Percurso Profissional</h3>
+                
+                <div class="experience-item">
+                    <div class="exp-details">
+                        <h4 class="exp-role">ESTAGIÁRIO DE TI</h4>
+                        <p class="exp-company">Colégio Logosófico</p>
+                        <p class="exp-date">Belo Horizonte, MG</p>
+                    </div>
+                    <div class="exp-description">
+                        <ul>
+                            <li>Administração da rede interna, configuração de hosts e instalação de softwares.</li>
+                            <li>Suporte técnico direto a usuários</li>
+                        </ul>
+                    </div>
+                </div> <div class="minor-section">
+                    <div class="experience-item"> 
+                        
+                        <div class="exp-details">
+                            <h4 class="exp-role" style="color: #666666;">OUTRAS ATUAÇÕES</h4>
+                            <p class="exp-company">Trabalhos Informais</p>
+                        </div>
+                        
+                        <div class="exp-description">
+                            <ul class="minor-list">
+                                <li>Garçom - Assados da Wal - 2 anos</li>
+                                <li>Garçom - Mexican Maleta / Divino Fogão</li>
+                                <li>Marketing Digital - Kione Cométicos</li>
+                            </ul>
+                        </div>
+                        
+                    </div> </div>
+            </section>
+
+            <section class="section education">
+                <h3 class="section-title">Percurso Académico</h3>
+                <div class="education-item">
+                    <div class="edu-details">
+                        <h4 class="edu-degree">TÉCNICO EM INFORMÁTICA</h4>
+                        <p class="edu-institution">Faculdade Senac</p>
+                    </div>
+                    <div class="edu-description">
+                        <ul>
+                            <li>Aprofundamento de conhecimentos em sistemas, redes e hardware.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="edu-details">
+                        <h4 class="edu-degree">CURSO INTRODUÇÃO ÀS REDES</h4>
+                        <p class="edu-institution">Cisco</p>
+                    </div>
+                    <div class="edu-description">
+                        <ul>
+                            <li>Conhecimentos sobre comunicação entre dispositivos, topologias de rede, protocolos e endereçamento IP.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="minor-section">
+                    <div class="education-item">
+                        <div class="edu-details">
+                            <h4 class="edu-degree" style="color: #666666;">COMPLEMENTAR</h4>
+                            <p class="edu-institution">Diversos</p>
+                        </div>
+                        <div class="edu-description">
+                            <ul class="minor-list">
+                                <li><strong>Ensino Médio Completo</strong> - Escola Maestro Villa Lobos</li>
+                                <li><strong>Design Thinking</strong> - Faculdade Senac</li>
+                                <li><strong>Pacote Office</strong> - Faculdade Senac</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+        </main>
     </div>
 </body>
 </html>
