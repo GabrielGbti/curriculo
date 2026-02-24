@@ -1,4 +1,4 @@
-/* Reseta margens e define a fonte padrão */
+/* Reseta margens e define a fonte padrão para uma aparência limpa */
 * {
     margin: 0;
     padding: 0;
@@ -6,126 +6,348 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fundo da página levemente acinzentado */
 body {
-    background-color: #f3f2ef;
-    color: #333;
-    line-height: 1.6;
-    padding: 40px 20px;
+    background-color: #e0e0e0; /* Cor de fundo da página para destacar o currículo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Caixa principal do currículo (simulando uma folha A4) */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Contêiner principal do currículo com sombra para efeito de "papel" */
+.resume-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden; /* Garante que a barra lateral não "vaze" */
+    border-radius: 8px; /* Cantos ligeiramente arredondados */
 }
 
-/* Cabeçalho */
-header {
+/* --- Estilos da Barra Lateral (Azul) --- */
+.sidebar {
+    background-color: #2e3192;
+    color: #fff;
+    width: 30%;
+    /* Removemos o padding do topo e laterais. Mantemos apenas um pouco embaixo. */
+    padding: 0 0 30px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border-bottom: 3px solid #0a66c2; /* Cor azul do LinkedIn */
-    padding-bottom: 20px;
-    margin-bottom: 30px;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #000000;
-    margin-bottom: 5px;
-    letter-spacing: -0.5px;
+.profile-photo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0; 
+    overflow: hidden;
+    margin-bottom: 30px; 
 }
 
-header h2 {
-    font-size: 1.1em;
-    color: #0a66c2;
-    font-weight: 600;
-    margin-bottom: 15px;
+/* A imagem se ajusta ao contêiner */
+.photo {
+    width: 100%;
+    height: 340px; /* Defina aqui a altura que você quer que a foto ocupe no topo */
+    object-fit: cover; /* Garante que a foto corte para preencher o espaço sem esticar */
+    display: block; /* Remove pequenos espaços indesejados abaixo da imagem */
+    border: 4px solid #3a3eb1;
 }
 
-header p {
-    color: #666666;
-    font-size: 0.9em;
-    margin-bottom: 3px;
-}
-
-/* Seções gerais */
-section {
-    margin-bottom: 35px;
-}
-
-h3 {
-    font-size: 1.3em;
-    color: #000000;
+.sidebar-title {
+    font-size: 1.4em;
     text-transform: uppercase;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 8px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar-section {
+    padding: 0 30px;
+    width: 100%;
+    margin-bottom: 35px; /* Cria o espaço entre "Dados Pessoais" e "Dados de Contato" */
+}   
+
+.sidebar-section ul {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+}
+
+.sidebar-section li {
     margin-bottom: 15px;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+}
+
+/* Espaçamento para os ícones de contato */
+.sidebar-section li i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Destaca as palavras Nome, Idade e Local */
+.sidebar-section li strong {
+    margin-right: 8px;
+    font-weight: 600;
+    color: #a3c2ff; /* Um azul mais clarinho para dar contraste com o texto branco */
+}
+/* --- Estilos do Conteúdo Principal (Branco) --- */
+.main-content {
+    width: 70%;
+    padding: 50px 60px;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.name {
+    font-size: 3em;
+    color: #2e3192; /* Nome na cor azul */
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: 500;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Texto do Sobre */
-.sobre p {
-    margin-bottom: 12px;
-    text-align: justify;
-    font-size: 0.95em;
+.section {
+    margin-bottom: 40px;
 }
 
-/* Experiência Profissional */
-.job {
-    margin-bottom: 20px;
-}
-
-.job h4 {
-    font-size: 1.1em;
-    color: #333333;
-}
-
-.job .company {
-    font-style: italic;
-    color: #666666;
+.section-title {
+    font-size: 1.5em;
+    color: #2e3192; /* Títulos das seções em azul */
+    text-transform: uppercase;
     margin-bottom: 10px;
-    font-size: 0.95em;
+    border-bottom: 2px solid #2e3192;
+    padding-bottom: 10px;
+    font-weight: 700;
 }
 
-.job ul, .formacao ul {
-    margin-left: 20px;
+.summary p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
 }
 
-.job li, .formacao li {
-    margin-bottom: 8px;
-    font-size: 0.95em;
-}
-
-/* Tags de Habilidades */
+/* Lista de Competências */
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 10px;
-    margin-left: 0;
+    list-style-type: disc; /* Usa bullets (pontos) */
+    padding-left: 20px;
+    columns: 2; /* Divide a lista em duas colunas */
+    column-gap: 40px;
 }
 
 .skills-list li {
-    background-color: #e9ecef;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 500;
-    color: #333333;
-    border: 1px solid #d1d5db;
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.4;
 }
 
-/* Responsividade para telas menores (celulares) */
-@media (max-width: 600px) {
-    .container {
-        padding: 25px;
+/* --- Estilos para Experiência e Formação (Layout de 2 colunas) --- */
+.experience-item, .education-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Coluna da esquerda menor, direita maior */
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.exp-details, .edu-details {
+    text-align: left;
+}
+
+.exp-role, .edu-degree {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #2e3192;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.exp-company, .edu-institution {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.exp-date {
+    font-size: 0.9em;
+    color: #777;
+    font-style: italic;
+}
+
+.exp-description ul, .edu-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.exp-description li, .edu-description li {
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* --- Estilos para Informações Secundárias (Bicos e Cursos Extras) --- */
+.minor-section {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #cccccc; /* Linha tracejada discreta para separar */
+}
+
+.minor-title {
+    font-size: 1.05em;
+    color: #666666; /* Cor mais neutra que o azul principal */
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.minor-list {
+    list-style-type: square; /* Usa quadradinhos em vez de bolinhas */
+    padding-left: 20px;
+}
+
+.minor-list li {
+    margin-bottom: 8px;
+    font-size: 0.9em; /* Fonte levemente menor para não roubar a atenção */
+    color: #555555;
+}
+
+.minor-list strong {
+    color: #333333;
+    font-weight: 600;
+}
+
+/* --- Configuração especial e definitiva para PDF --- */
+@media print {
+    @page {
+        margin: 0; 
+        size: A4 portrait; 
     }
     
-    header h1 {
-        font-size: 2em;
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
+
+    body {
+        background-color: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important; 
+    }
+
+    .resume-container {
+        box-shadow: none !important; 
+        border-radius: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        height: 296mm !important; /* Trava na altura exata da folha A4 */
+        overflow: hidden !important; 
+    }
+
+    /* Reduz os espaços laterais para ganhar largura útil */
+    .main-content { width: 68% !important; padding: 25px 30px !important; }
+
+    /* Diminui um pouco a foto para ganhar espaço no topo */
+
+    /* Força os títulos a não quebrarem de linha */
+    .name { font-size: 2.1em !important; line-height: 1 !important; margin-bottom: 5px !important; }
+    .title { font-size: 0.85em !important; margin-bottom: 15px !important; }
+    .section-title { font-size: 1.2em !important; margin-bottom: 10px !important; padding-bottom: 5px !important;}
+    .sidebar-title { font-size: 1.1em !important; }
+
+    /* CORRIGE A COLUNA ESPREMIDA: Reduz a largura da esquerda para dar espaço aos textos da direita */
+    .experience-item, .education-item {
+        grid-template-columns: 130px 1fr !important; /* Era 220px, agora sobra muito mais espaço pros bullets */
+        gap: 15px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Diminui levemente todas as fontes para não empurrar a folha pra baixo */
+    p, li, .exp-role, .edu-degree { 
+        font-size: 0.85em !important; 
+        line-height: 1.4 !important;
+    }
+    .summary p { margin-bottom: 6px !important; }
+    
+    /* Aproxima as seções para economizar altura */
+    .section { margin-bottom: 15px !important; }
+    .minor-section { margin-top: 10px !important; padding-top: 10px !important; }
+    .sidebar-section { margin-bottom: 25px !important; }
+}
+
+/* Responsividade para telas menores (celulares e tablets) */
+@media screen and (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 30px 20px;
+        align-items: center;
+    }
+
+    .sidebar-title {
+        text-align: center;
+    }
+    
+    .contact-info ul {
+        text-align: center;
+    }
+    
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .name {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .skills-list {
+        columns: 1; /* Uma coluna para competências em telas pequenas */
+    }
+
+    .experience-item, .education-item {
+        grid-template-columns: 1fr; /* Uma coluna para experiência/formação */
+        gap: 15px;
+    }
+    
+    .exp-details, .edu-details {
+        margin-bottom: 10px;
+    }
+
 }
